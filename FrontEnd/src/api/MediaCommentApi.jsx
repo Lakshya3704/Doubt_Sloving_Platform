@@ -1,7 +1,9 @@
 import axios from "axios";
 
+const BASE = import.meta.env.VITE_API_BASE_URL || "";
+
 const api = axios.create({
-  baseURL: "http://localhost:8000/api/v1/mediaComments",
+  baseURL: `${BASE}/api/v1/mediaComments`,
   withCredentials: true,
 });
 
